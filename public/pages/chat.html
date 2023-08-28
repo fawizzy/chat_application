@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>chat_app</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/Chat.css">
+</head>
+
+<body>
+    <div class="container-fluid" style="height: 100%;">
+        <div class="row">
+            <div id="user-list-page" class="col-lg-4 col-xl-4" style="height: 100%;">
+                <div class="row">
+                    <div class="col d-flex flex-nowrap justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center py-2" style="background: rgba(52,58,64,0.2);height: 4rem;">
+                        <h5 class="mr-auto my-auto">Chat Application</h5><button class="btn shadow-none border-0 my-auto" type="button" style="width: 2.5rem;height: 2.5rem;"><i class="far fa-comment-alt"></i></button>
+                    </div>
+                </div>
+                <div class="row px-3 py-2">
+                    <div class="col" style="border-radius: 25px;box-shadow: 0px 0px 5px var(--gray-dark);">
+                        <form class="d-flex align-items-center px-2"><i class="fas fa-search fa-lg"></i><input class="shadow-none form-control flex-shrink-1" type="search" placeholder="Busca un chat o inicia uno nuevo" style="border-radius: 13px;border-style: none;"></form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="overflow-x: none;overflow-y: auto;height: 100%;">
+                        <ul id="user_list" class="list-unstyled" style="height: 100%;">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="chat-block" class="col d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                <div class="row" style="height: 100%;">
+                    <div class="col d-flex align-items-lg-center align-items-xl-center border-start border-muted" style="background: rgba(52,58,64,0.2);height: 4rem;"><button class="btn d-block d-sm-block d-md-block d-lg-none d-xl-none border-0 my-auto" type="button" style="width: 2.5rem;height: 2.5rem;"><i class="far fa-arrow-alt-circle-left"></i></button>
+                        <h5 id="messageheader" class="mr-auto my-auto">Ximena Samano</h5><span class="my-auto"><i class="fas fa-info-circle"></i></span>
+                        <div class="container" style="display: flex; justify-content: flex-end;">
+                              <span ></span><button type="button" id="logout" class="glyphicon glyphicon-log-out btn btn-info btn-lg">Log out</button> 
+                          </div>
+                    </div>
+                </div>
+                <div class="row px-3 py-2 border-start border-muted" style="height: 100%;">
+                    <div class="col" style="overflow-x: none;overflow-y: auto;height: 100%;">
+                        <ul id="chats" class="list-unstyled">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div id="textarea" class="row px-3 py-2" style="background: rgba(52,58,64,0.2);">
+                    <div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-10" style="padding: 0;"><textarea id="message" class="w-100 h-100 border-0" style="border-radius: 25px;resize:none;"></textarea></div>
+                    <div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-nowrap d-md-flex justify-content-md-end p-0"><button class="btn h-100 mx-auto" type="button" style="border-radius: 10px;"><i class="far fa-image"></i></button><button id="send" class="btn btn-light h-100 w-auto" type="button" style="border-radius: 10px;"><i class="fab fa-telegram-plane"></i></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets//socket.io/socket.io.js"></script>
+    <script src="../assets/jquery/jquery.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/userlist.js"></script>
+    
+</body>
+
+</html>
